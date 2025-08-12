@@ -18,7 +18,7 @@ console.log("Failed to connect rabbitmq",error)
     }
 }
 
-export const publishToQueue = async (queueName: string, message: string) => {
+export const publishToQueue = async (queueName: string, message: any) => {
     if (!channel) {
         console.log("Rabbitmq channel is not initialized")
         return
